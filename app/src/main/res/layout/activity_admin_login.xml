@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/dim_20">
+
+            <ImageView
+                android:id="@+id/login_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_200"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/dim_10"
+                app:srcCompat="@drawable/login" />
+
+
+            <TextView
+                android:id="@+id/login_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/chintezy"
+                android:gravity="center"
+                android:text="@string/login_to_account"
+                android:textColor="#E2090909"
+                android:textSize="@dimen/sp_25"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/login_with"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dim_15"
+                android:fontFamily="@font/akatamakata_light"
+                android:gravity="center"
+                android:text="@string/login_subtext"
+                android:textColor="#E24A4A4A" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginTop="@dimen/dim_30"
+                android:layout_marginRight="@dimen/dim_10"
+                android:padding="@dimen/dim_12"
+                app:cardCornerRadius="@dimen/dim_10"
+                app:cardElevation="@dimen/dim_10">
+
+                <EditText
+                    android:id="@+id/UserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="@dimen/dim_20"
+                    android:fontFamily="@font/akatamakata_bold"
+                    android:hint="@string/hint_text_username"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/dim_12"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_text"
+                    android:textSize="@dimen/sp_15" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginTop="@dimen/dim_20"
+                android:layout_marginRight="@dimen/dim_10"
+                android:padding="@dimen/dim_12"
+                app:cardCornerRadius="@dimen/dim_10"
+                app:cardElevation="@dimen/dim_10">
+
+
+                <EditText
+                    android:id="@+id/Password_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text"
+                    android:drawableStart="@drawable/key_"
+                    android:drawableEnd="@drawable/visibility_off"
+                    android:drawablePadding="@dimen/dim_20"
+                    android:fontFamily="@font/akatamakata_bold"
+                    android:hint="@string/hint_text_password"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/dim_12"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_text"
+                    android:textSize="@dimen/sp_15" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/forgotpass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_19"
+                android:layout_marginStart="@dimen/dim_12"
+                android:layout_marginTop="@dimen/dim_10"
+                android:fontFamily="@font/akatamakata_bold"
+                android:text="@string/forgot_password"
+                android:textColor="@color/black" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Loginbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dim_30"
+                    android:background="@drawable/edit_button"
+                    android:backgroundTint="@color/black"
+                    android:padding="@dimen/dim_12"
+                    android:text="@string/btnLogin"
+                    android:textColor="@color/white" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/KonfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

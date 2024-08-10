@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99973950201",
+    "project_id": "restauant-ordering",
+    "storage_bucket": "restauant-ordering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99973950201:android:397f848777549211061028",
+        "android_client_info": {
+          "package_name": "com.example.hotel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBguC81NWH0Sp1dglFtw90FqXdT-orm6-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

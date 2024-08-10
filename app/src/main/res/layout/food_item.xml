@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Lay_food"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            app:cardCornerRadius="10dp">
+
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/gradient_color"
+                    app:srcCompat="@drawable/ic_error" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:id="@+id/LayFoodName"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/Lay_food"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtfoodname"
+                android:layout_toLeftOf="@+id/img_veg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Classic CheeseBurger"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="17dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_veg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/img_veg"/>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LayFoodDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="32dp"
+                android:layout_toRightOf="@+id/Lay_food"
+                android:layout_below="@+id/LayFoodName">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtFoodDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="start|center"
+                    android:text="A-401, RJD Business Hub, Naginawadi Rd, Katargam, Surat, Gujarat 395004"
+                    android:textColor="#9F9F9F9F"
+                    android:textSize="15dp"
+                    app:autoSizeTextType="uniform" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LayFoodPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toRightOf="@+id/Lay_food"
+                android:layout_below="@+id/LayFoodDescription">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtFoodPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="start|center"
+                    android:textColor="@color/black"
+                    android:text="₹ 99"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    app:autoSizeTextType="uniform" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/txtFoodPrice">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/LayItemAdd"
+                        android:layout_width="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="35dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="20dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Show Details"
+                            android:gravity="center"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"/>
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

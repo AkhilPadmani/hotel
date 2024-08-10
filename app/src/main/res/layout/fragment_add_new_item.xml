@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Main_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:cardElevation="5dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="@dimen/dim_25"
+                    android:layout_height="@dimen/dim_25"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dim_7"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtTableNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/View"
+                    android:layout_toRightOf="@+id/btnBack"
+                    android:fontFamily="@font/desyatiy_bold"
+                    android:gravity="center"
+                    android:text="@string/add_new_food"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/View"
+                    android:layout_width="@dimen/dim_30"
+                    android:layout_height="@dimen/dim_30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Main_Toolbar"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_8">
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/KonfettiView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginTop="@dimen/dim_10"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layfoodname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim_10"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_10"
+                    app:cardElevation="@dimen/dim_5">
+
+                    <EditText
+                        android:id="@+id/editTextName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawableStart="@drawable/ic_user"
+                        android:drawablePadding="@dimen/dim_20"
+                        android:fontFamily="@font/akatamakata_bold"
+                        android:hint="@string/hint_text_food_name"
+                        android:inputType="text"
+                        android:padding="@dimen/dim_12"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_text"
+                        android:textSize="@dimen/sp_15" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layfooddesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layfoodname"
+                    android:layout_margin="@dimen/dim_10"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_10"
+                    app:cardElevation="@dimen/dim_5">
+
+
+                    <EditText
+                        android:id="@+id/editTextDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawableStart="@drawable/ic_user"
+                        android:drawablePadding="@dimen/dim_20"
+                        android:fontFamily="@font/akatamakata_bold"
+                        android:hint="@string/hint_text_food_desc"
+                        android:inputType="text"
+                        android:padding="@dimen/dim_12"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_text"
+                        android:textSize="@dimen/sp_15" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layfullprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layfooddesc"
+                    android:layout_margin="@dimen/dim_10"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_10"
+                    app:cardElevation="@dimen/dim_5">
+
+
+                    <EditText
+                        android:id="@+id/editTextPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawableStart="@drawable/ic_user"
+                        android:drawablePadding="@dimen/dim_20"
+                        android:fontFamily="@font/akatamakata_bold"
+                        android:hint="@string/hint_text_food_fullprice"
+                        android:inputType="number"
+                        android:padding="@dimen/dim_12"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_text"
+                        android:textSize="@dimen/sp_15" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layhalfprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layfullprice"
+                    android:layout_margin="@dimen/dim_10"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_10"
+                    app:cardElevation="@dimen/dim_5">
+
+
+                    <EditText
+                        android:id="@+id/editTextHalfPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawableStart="@drawable/ic_user"
+                        android:drawablePadding="@dimen/dim_20"
+                        android:fontFamily="@font/akatamakata_bold"
+                        android:hint="@string/hint_text_food_halfprice"
+                        android:inputType="number"
+                        android:padding="@dimen/dim_12"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_text"
+                        android:textSize="@dimen/sp_15" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/laycategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layhalfprice"
+                    android:layout_margin="@dimen/dim_10"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_20"
+                    app:cardElevation="@dimen/dim_5">
+
+                    <Spinner
+                        android:id="@+id/spinnerCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dim_12" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layfilepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/laycategory"
+                    android:layout_margin="@dimen/dim_10"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dim_25"
+                    app:cardElevation="@dimen/dim_5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageViewSelected"
+                            android:layout_width="47dp"
+                            android:layout_height="47dp"
+                            android:layout_gravity="end"
+                            android:cropToPadding="true"
+                            android:src="@drawable/hotel" />
+
+                        <ImageView
+                            android:id="@+id/buttonSelectImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:adjustViewBounds="true"
+                            android:padding="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_gallery"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/CardViewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layfilepicker"
+                    android:layout_margin="@dimen/dim_10"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/black"
+                    app:cardCornerRadius="@dimen/dim_14"
+                    app:cardElevation="@dimen/dim_5">
+
+                    <TextView
+                        android:id="@+id/buttonAddFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:text="Add Food"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

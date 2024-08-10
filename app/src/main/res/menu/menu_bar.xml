@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group>
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/rate_review"
+            android:title="@string/home" />
+
+    </group>
+
+    <item android:title="@string/communicate_title">
+
+        <menu>
+            <item
+                android:id="@+id/rate"
+                android:icon="@drawable/rate_review"
+                android:title="@string/rate" />
+
+            <item
+                android:id="@+id/userFeedback"
+                android:icon="@drawable/rate_review"
+                android:title="@string/feedback" />
+        </menu>
+    </item>
+
+    <item android:title="@string/login_title">
+
+        <menu>
+            <item
+                android:id="@+id/adminlogin"
+                android:icon="@drawable/rate_review"
+                android:title="@string/admin_login" />
+
+            <item
+                android:id="@+id/adminregister"
+                android:icon="@drawable/rate_review"
+                android:title="@string/admin_register" />
+
+
+        </menu>
+    </item>
+
+    <item android:title="@string/others_title">
+
+        <menu>
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/rate_review"
+                android:title="@string/profile" />
+
+            <item
+                android:id="@+id/Settings"
+                android:icon="@drawable/settings"
+                android:title="@string/settings" />
+
+        </menu>
+    </item>
+
+
+</menu>

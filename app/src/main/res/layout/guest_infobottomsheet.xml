@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/LayGuestInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtGuestInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Guest Info"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTableInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/txtGuestInfo"
+            android:gravity="center"
+            android:text="3B"
+            android:textColor="@color/red"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_round"
+            app:srcCompat="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/LayEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LayGuestInfo"
+        android:layout_margin="15dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/LayEdittextGuestName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="#F8F8F7"
+            app:cardCornerRadius="12dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/UserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F8F8F7"
+                android:textColorHint="#808080"
+                app:boxBackgroundColor="#F8F8F7"
+                app:boxBackgroundMode="filled">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EditTextGuest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_guest"
+                    android:drawablePadding="20dp"
+                    android:hint="Guest Name"
+                    android:textColorHint="#F8F8F7"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/LayEdittextGuestNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LayEdittextGuestName"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="#F8F8F7"
+            app:cardCornerRadius="12dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/UserContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F8F8F7"
+                android:textColorHint="#808080"
+                app:boxBackgroundColor="#F8F8F7"
+                app:boxBackgroundMode="filled">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EditTextGuestNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_contact"
+                    android:drawablePadding="20dp"
+                    android:hint="Contact Number"
+                    android:inputType="number"
+                    android:textColorHint="#F8F8F7"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

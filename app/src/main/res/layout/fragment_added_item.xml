@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Main_Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                app:cardElevation="5dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/Toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/btnBack"
+                            android:layout_width="@dimen/dim_25"
+                            android:layout_height="@dimen/dim_25"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dim_7"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_back"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/txtTableNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/View"
+                            android:layout_toRightOf="@+id/btnBack"
+                            android:fontFamily="@font/desyatiy_bold"
+                            android:gravity="center"
+                            android:text="@string/app_name"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/View"
+                            android:layout_width="@dimen/dim_30"
+                            android:layout_height="@dimen/dim_30"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_back" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SpinnerCardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Main_Toolbar"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="@dimen/dim_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp">
+
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:entries="@array/categories_array" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SpinnerCardview"
+                android:layout_marginTop="10dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/food_item" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chinese_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/all_recyclerview"
+                android:layout_marginTop="10dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/food_item" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/punjabi_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chinese_recyclerview"
+                android:layout_marginTop="10dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/food_item" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gujarati_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/punjabi_recyclerview"
+                android:layout_marginTop="10dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/food_item" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_below="@+id/progress_bar"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="No data available"
+        android:visibility="gone" />
+
+</RelativeLayout>
